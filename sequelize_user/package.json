@@ -1,5 +1,5 @@
 {
-  "name": "sequelize_migrations",
+  "name": "sequelize_user",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
