@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
       User.hasMany(models.Payment,{
         foreignKey: 'user_id'
       });
-      User.belongsTo(models.Class,{
+      User.belongsTo(models.Section,{
         foreignKey:'section_id'
       })
     }
@@ -31,6 +31,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'User',
+    tableName:'User'
   });
   return User;
 };
