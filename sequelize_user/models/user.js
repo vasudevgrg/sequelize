@@ -14,8 +14,10 @@ module.exports = (sequelize, DataTypes) => {
       User.hasMany(models.Address,{
         foreignKey:'user_id'
       });
-      User.hasMany(models.Payment,{
-        foreignKey: 'user_id'
+      User.belongsToMany(models.Payment,{
+        through:'UserPayment',
+        foreignKey: 'user_id',
+        otherKey: 'payment_id'
       });
       User.belongsTo(models.Section,{
         foreignKey:'section_id'
